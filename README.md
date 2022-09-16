@@ -40,5 +40,5 @@
 	var result = matrixOut.Where(x => !string.IsNullOrWhiteSpace(x));
 
 7. Выводим в консоль полученный массив строк
-
+---
 	Console.WriteLine(String.Join(",", result));
