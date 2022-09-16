@@ -27,7 +27,6 @@ string[] matrixOut = new string[element];
 for (int i = 0; i < element; i++)
 {
 	if (matrix[i].Length <= 3) matrixOut[i] = matrix[i];
-	else matrixOut[i] = "";
 }
 Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
 var result = matrixOut.Where(x => !string.IsNullOrWhiteSpace(x));
