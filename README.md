@@ -21,8 +21,7 @@
 
 3. Выводим на экран полученный массив.
 ---
-	for (int j = 0; j < matrix.GetLength(0); j++)
-	{ Console.Write(matrix[j] + "\t"); }
+	Console.WriteLine(String.Join(",", matrix));
 
 4. Объявляем новый массив, который будет формироваться из строк длиной не более 3 символов.
 ---
@@ -36,8 +35,10 @@
 	else matrixOut[i] = "";
 	}
 
-6. Выводим в консоль полученный массив строк
+6. Удаляем пустые строки массива
 ---
-	Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
-	for (int j = 0; j < matrixOut.GetLength(0); j++)
-	{ if (matrixOut[j]!="") Console.Write(matrixOut[j] + "\t"); }
+	var result = matrixOut.Where(x => !string.IsNullOrWhiteSpace(x));
+
+7. Выводим в консоль полученный массив строк
+
+	Console.WriteLine(String.Join(",", result));
