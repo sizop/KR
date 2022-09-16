@@ -21,7 +21,7 @@ string [] GetArray (int m, int n) // метод ввода массива
 	return Array;
 }
 string[] matrix = GetArray(symbol, element);
-for (int j = 0; j < matrix.GetLength(0); j++) //вывод массива
+for (int j = 0; j < matrix.GetLength(0); j++)
 { Console.Write(matrix[j] + "\t"); }
 string[] matrixOut = new string[element];
 for (int i = 0; i < element; i++)
@@ -30,5 +30,7 @@ for (int i = 0; i < element; i++)
 	else matrixOut[i] = "";
 }
 Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
-for (int j = 0; j < matrixOut.GetLength(0); j++) //вывод массива 2
-{ if (matrixOut[j]!="") Console.Write(matrixOut[j] + "\t"); }
+for (int j = 0; j < matrixOut.GetLength(0); j++)
+{
+	if (matrixOut[j] != "") Console.Write(matrixOut[j] + "\t");
+}

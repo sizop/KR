@@ -39,5 +39,5 @@
 6. Выводим в консоль полученный массив строк
 ---
 	Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
-	for (int j = 0; j < matrixOut.GetLength(0); j++) //вывод массива 2
+	for (int j = 0; j < matrixOut.GetLength(0); j++)
 	{ if (matrixOut[j]!="") Console.Write(matrixOut[j] + "\t"); }
