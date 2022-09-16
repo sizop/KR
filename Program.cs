@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Максимальное количество символов в элементе: ");
+﻿Console.WriteLine("Максимальное количество символов в элементе массива: ");
 int symbol = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Количество элементов массива: ");
 int element = Convert.ToInt32(Console.ReadLine());
@@ -23,3 +23,12 @@ string [] GetArray (int m, int n) // метод ввода массива
 string[] matrix = GetArray(symbol, element);
 for (int j = 0; j < matrix.GetLength(0); j++) //вывод массива
 { Console.Write(matrix[j] + "\t"); }
+string[] matrixOut = new string[element];
+for (int i = 0; i < element; i++)
+{
+	if (matrix[i].Length <= 3) matrixOut[i] = matrix[i];
+	else matrixOut[i] = "";
+}
+Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
+for (int j = 0; j < matrixOut.GetLength(0); j++) //вывод массива 2
+{ if (matrixOut[j]!="") Console.Write(matrixOut[j] + "\t"); }
