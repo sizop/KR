@@ -2,6 +2,7 @@
 int symbol = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Количество элементов массива: ");
 int element = Convert.ToInt32(Console.ReadLine());
+
 string [] GetArray (int m, int n) // метод ввода массива 
 {
 	string[] Array = new string[n];
@@ -20,14 +21,20 @@ string [] GetArray (int m, int n) // метод ввода массива
 	}
 	return Array;
 }
+
 string[] matrix = GetArray(symbol, element);
 Console.Write("\n" + "Исходный массив: " + "\n");
 Console.WriteLine(String.Join(",", matrix));
-string[] matrixOut = new string[element];
-for (int i = 0; i < element; i++)
+
+string [] matrixOut (string [] matrix, int element) // метод новый массив 
+{string[] matrixOut = new string[element];
+for (int i = 0; i < element; i++) //Строки 27-30 объеденить в метод?
 {
 	if (matrix[i].Length <= 3) matrixOut[i] = matrix[i];
 }
-Console.Write("\n" + "Элементы массива с количеством символов <=3: " + "\n");
-var result = matrixOut.Where(x => !string.IsNullOrWhiteSpace(x));
+return matrixOut;}
+
+var result = matrixOut(matrix,element).Where(x => !string.IsNullOrWhiteSpace(x));
+Console.Write("\n" + "Элементы массива с количеством символов <=3: "
+ + "\n");
 Console.WriteLine(String.Join(",", result));
